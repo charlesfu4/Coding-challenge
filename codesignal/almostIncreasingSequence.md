@@ -1,7 +1,7 @@
 ## almostincreasingSequence
 Given a sequence of integers as an array, determine whether it is possible to obtain a strictly increasing sequence by removing no more than one element from the array.
 
-'''java
+```java
 
 public boolean almostIncreasingSequence(int[] a) {
     int count1 = 0 , count2 = 0;
@@ -14,6 +14,7 @@ public boolean almostIncreasingSequence(int[] a) {
     }
      return (count1 <=1) && (count2 <= 1);
 }
-'''
+
+```
 
 To assure strictly ascending, we check both the number on the right and the one on the left.This concept can be transfered into checking thre consecutive numbers at the same time. By giving the limited numbers of counts. We exclude the situation where the double check does not pass. Therefore, the almostincreasing condition will happen when both count are smaller or equal to 1. 
