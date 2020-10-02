@@ -16,5 +16,11 @@ public boolean almostIncreasingSequence(int[] a) {
 }
 
 ```
+To assure strictly ascending, we check both the number on the right and the one on the left.This concept can be transfered into checking thre consecutive numbers at the same time. By giving the limited numbers of counts. We exclude the situation where the double check does not pass. Therefore, the almostincreasing condition will happen when both counts are smaller or equal to 1. 
 
-To assure strictly ascending, we check both the number on the right and the one on the left.This concept can be transfered into checking thre consecutive numbers at the same time. By giving the limited numbers of counts. We exclude the situation where the double check does not pass. Therefore, the almostincreasing condition will happen when both count are smaller or equal to 1. 
+My first solution for this problem was to use a for loop with ArrayList to remove element one by one. Afterward, we called sort method on the copied Arraylist and check if it is still the same with the previous one. This method failed when the array includes three same elements.
+```java
+int[] threesame = {1,2,3,5,5,5};
+```
+My second idea was similar to the solution which works. However, I check only the (i+1) element without checking the (i+2) one. This method also suffers from three duplicate elements.
+
