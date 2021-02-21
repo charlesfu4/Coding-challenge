@@ -21,4 +21,18 @@ class Solution {
 
 ### **Follow up**: Could you implement a solution with a linear runtime complexity and without using extra memory?
 
+By doing XOR operation, the unique number will exist after iterate through all the numbers in the array.
+
+```java
+class Solution {
+    int target = 0;
+    public int singleNumber(int[] nums) {
+        for(int i = 0; i < nums.length; i++){
+            target = target^nums[i];
+        }
+        return target;
+    }
+}
+```
+
 
